@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/test_tcp_server.dir/main.c.o  -o test_tcp_server 

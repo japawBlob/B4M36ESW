@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CLionExternalBuildManager">
+    <target id="4b722e07-4c64-48e9-9f88-930cb2c60573" name="Build-Mason" defaultType="TOOL">
+      <configuration id="eafac360-83b0-4e7b-af0e-823c584cbb59" name="Build-Mason" toolchainName="WSL">
+        <build type="TOOL">
+          <tool actionId="Tool_External Tools_Build" />
+        </build>
+        <clean type="TOOL">
+          <tool actionId="Tool_External Tools_Clean" />
+        </clean>
+      </configuration>
+    </target>
+  </component>
+</project>
