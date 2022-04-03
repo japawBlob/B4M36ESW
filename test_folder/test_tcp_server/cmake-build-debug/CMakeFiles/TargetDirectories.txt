@@ -1,0 +1,3 @@
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/test_folder/test_tcp_server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/test_folder/test_tcp_server/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/test_folder/test_tcp_server/cmake-build-debug/CMakeFiles/test_tcp_server.dir

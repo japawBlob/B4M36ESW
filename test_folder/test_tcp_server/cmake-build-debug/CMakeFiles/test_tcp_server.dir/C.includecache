@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/test_folder/test_tcp_server/main.c
+sys/socket.h
+-
+sys/types.h
+-
+arpa/inet.h
+-
+fcntl.h
+-
+string.h
+-
+stdio.h
+-
+unistd.h
+-
+
