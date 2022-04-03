@@ -1,0 +1,166 @@
+diff --git a/ellipse/CMakeLists.txt b/ellipse/CMakeLists.txt
+index 20e835e..3588328 100644
+--- a/ellipse/CMakeLists.txt
++++ b/ellipse/CMakeLists.txt
+@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
+ 
+ set(CMAKE_CXX_STANDARD 11)
+ 
+-set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -g -Og -Wall")
++set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -g -O3 -Wall")
+ 
+ project(find_ellipse)
+ 
+diff --git a/ellipse/Makefile b/ellipse/Makefile
+index b61fd71..603443e 100644
+--- a/ellipse/Makefile
++++ b/ellipse/Makefile
+@@ -1,6 +1,6 @@
+ CXX = g++
+ CC = $(CXX) # Use g++ for linking
+-CXXFLAGS = -g -Og -Wall -std=c++11 $(shell pkg-config --cflags opencv4)
++CXXFLAGS = -g -O3 -Wall -std=c++11 $(shell pkg-config --cflags opencv4)
+ LDLIBS = -lboost_filesystem -lboost_system $(shell pkg-config --libs opencv4)
+ 
+ all: find_ellipse
+diff --git a/ellipse/ellipse.cpp b/ellipse/ellipse.cpp
+index ff74de7..e742497 100644
+--- a/ellipse/ellipse.cpp
++++ b/ellipse/ellipse.cpp
+@@ -111,27 +111,35 @@ Ellipse::Ellipse(double a, double b, double c, double d, double f, double g)
+     f1.y = center.y - temp_c * sin(angle*M_PI/180);
+     f2.x = center.x + temp_c * cos(angle*M_PI/180);
+     f2.y = center.y + temp_c * sin(angle*M_PI/180);
++
++    float s = sin(angle/180.0*M_PI);
++    float h = cos(angle/180.0*M_PI);
++
++    rot = cv::Matx22f(h, -s, s, h);
+ }
+ 
+ Ellipse::Ellipse(Point2f center, Size2f size, float angle)
+     : cv::RotatedRect(center, size, angle)
+ {}
+ 
+-Point Ellipse::pointAtAngle(double a, Vec2f *normal = 0) const
++float precomp = 180.0*M_PI;
++
++Point Ellipse::pointAtAngle(float a) const
+ {
+-    double s = sin(angle/180.0*M_PI);
+-    double c = cos(angle/180.0*M_PI);
+-    Matx22f rot(c, -s,
+-                s, c);
+-    Vec2f v(cos(a/180.0*M_PI) * size.width/2.0,
+-            sin(a/180.0*M_PI) * size.height/2.0);
++    //double s = sin(angle/180.0*M_PI);
++    //double c = cos(angle/180.0*M_PI);
++
++    //printf("angle: %f", angle);
++
++    Vec2f v(cosf(a/180.0*M_PI) * size.width/2.0,
++            sinf(a/180.0*M_PI) * size.height/2.0);
+     v = rot * v;
+ 
+-    if (normal) {
++    /*if (normal) {
+         Vec2f &n = *normal;
+         n = Vec2f(+cos(a/180.0*M_PI) * size.height/2.0, +sin(a/180.0*M_PI) * size.width/2.0);
+         n = rot * n;
+-    }
++    }*/
+     return Point(center.x + v[0], center.y + v[1]);
+ }
+ 
+@@ -155,7 +163,7 @@ static bool isEdgeAtPoint(const Mat1b &bw, const Point p, Point &realP)
+     }
+     realP = Point(p.x + centerOfGravity3x3[idx].dx,
+                   p.y + centerOfGravity3x3[idx].dy);
+-#warning TODO Return true only if the angle of the detected line is similar to the angle of ellipse edge
++//#warning TODO Return true only if the angle of the detected line is similar to the angle of ellipse edge
+     return idx != 0;
+ }
+ 
+@@ -167,9 +175,9 @@ void Ellipse::calcWeight(const Mat1b &bw, Mat3b *dbg, std::vector<Point> *points
+     Rect roi(Point(1, 1), bw.size() - Size(2, 2));
+ 
+     for (int a = 0; a < nWeightPoints; a++) {
+-        Vec2f normal;
+-        Point p = pointAtAngle(a * 360 / nWeightPoints, &normal);
+-        normal /= cv::norm(normal);
++        //Vec2f normal;
++        Point p = pointAtAngle(a);
++        //normal /= cv::norm(normal);
+         bool pOnEllipse = false;
+         if (roi.contains(p)) {
+             ptsInRoi++;
+@@ -180,7 +188,7 @@ void Ellipse::calcWeight(const Mat1b &bw, Mat3b *dbg, std::vector<Point> *points
+             if (pointsOnEllipse && pOnEllipse)
+                 pointsOnEllipse->push_back(realP);
+             if (dbg) {
+-                normal = normal / cv::norm(normal) * 10.0;
++                //normal = normal / cv::norm(normal) * 10.0;
+                 //line(*dbg, p, p+Point(20*cos(tangentAng), 20*sin(tangentAng)), CV_RGB(255, 255, 0));
+                 if (pOnEllipse)
+                     (*dbg)(realP) = Vec3b(0, 255, 255);
+diff --git a/ellipse/ellipse.h b/ellipse/ellipse.h
+index 3b022d1..c2fdc8e 100644
+--- a/ellipse/ellipse.h
++++ b/ellipse/ellipse.h
+@@ -5,6 +5,8 @@
+ #include <opencv2/core/core.hpp>
+ #include <vector>
+ 
++using namespace cv;
++
+ class Ellipse : public cv::RotatedRect {
+ public:
+     //  ax²+2bxy+cy²+2dx+2fy+g=0
+@@ -14,10 +16,13 @@ public:
+     static Ellipse fit(const std::vector<cv::Point> &p);
+     static Ellipse invalid() { return Ellipse(); }
+ 
+-    cv::Point pointAtAngle(double a, cv::Vec2f *normal) const;
++    cv::Point pointAtAngle(float a) const;
+ 
+     cv::Point2f f1, f2;
+ 
++    cv::Matx22f rot;
++
++
+     void operator*= (float scale) { center *= scale; size = size * scale; }
+     Ellipse operator* (float scale) const { Ellipse e(*this); e *= scale; return e; }
+ 
+@@ -32,12 +37,19 @@ public:
+     float getWeight() const { return weight; }
+     std::vector<cv::Point> getPointsOnEllipse(cv::Mat &img) const;
+ 
++
++
++
+ private:
+     float weight = 0.0;
+     static const int nWeightPoints = 360;
+ 
+     // Construct invalid ellipse
+     Ellipse() { center.x = NAN; }
++
+ };
+ 
++
++
++
+ #endif // ELLIPSE_H
+diff --git a/ellipse/imgproc.cpp b/ellipse/imgproc.cpp
+index 0c83a88..7912804 100644
+--- a/ellipse/imgproc.cpp
++++ b/ellipse/imgproc.cpp
+@@ -318,7 +318,7 @@ void processImage(Mat &image, MatPhases &phases, std::vector<Ellipse> &ellipses,
+     findEllipses(bw, ellipses, &visualization, param);
+     phases[MatPhases::VIS_EL] = visualization.clone();
+ 
+-#warning TODO Measure and print execution time of this function
++//#warning TODO Measure and print execution time of this function
+ }
+ 
+ Mat debugOnPixelEllipse(Mat1b &bw, Point p, const ImgProcParameters &param, Ellipse &e)
