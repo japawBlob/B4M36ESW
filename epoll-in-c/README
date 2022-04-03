@@ -1,0 +1,18 @@
+Epoll example
+=============
+
+This repository is simple example of non-blocking I/O event handling. It also
+serves as a template for the assignment of Effective Software (ESW) course.
+
+Build instructions:
+
+    meson setup builddir
+    cd builddir
+    ninja
+
+See the man pages for:
+- epoll
+- epoll_create1
+- epoll_ctl
+- epoll_wait
+- timerfd_create

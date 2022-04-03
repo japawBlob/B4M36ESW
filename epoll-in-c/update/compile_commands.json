@@ -1,0 +1,32 @@
+[
+  {
+    "directory": "/mnt/c/Users/JakubJíra/Codes/B4M36ESW/epoll-in-c/update",
+    "command": "cc -Iepoll_server@exe -I. -I.. -I../incl -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -Werror -g -MD -MQ 'epoll_server@exe/src_main.c.o' -MF 'epoll_server@exe/src_main.c.o.d' -o 'epoll_server@exe/src_main.c.o' -c ../src/main.c",
+    "file": "../src/main.c",
+    "output": "epoll_server@exe/src_main.c.o"
+  },
+  {
+    "directory": "/mnt/c/Users/JakubJíra/Codes/B4M36ESW/epoll-in-c/update",
+    "command": "cc -Iepoll_server@exe -I. -I.. -I../incl -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -Werror -g -MD -MQ 'epoll_server@exe/src_all.c.o' -MF 'epoll_server@exe/src_all.c.o.d' -o 'epoll_server@exe/src_all.c.o' -c ../src/all.c",
+    "file": "../src/all.c",
+    "output": "epoll_server@exe/src_all.c.o"
+  },
+  {
+    "directory": "/mnt/c/Users/JakubJíra/Codes/B4M36ESW/epoll-in-c/update",
+    "command": "cc -Iepoll_server@exe -I. -I.. -I../incl -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -Werror -g -MD -MQ 'epoll_server@exe/src_stdin.c.o' -MF 'epoll_server@exe/src_stdin.c.o.d' -o 'epoll_server@exe/src_stdin.c.o' -c ../src/stdin.c",
+    "file": "../src/stdin.c",
+    "output": "epoll_server@exe/src_stdin.c.o"
+  },
+  {
+    "directory": "/mnt/c/Users/JakubJíra/Codes/B4M36ESW/epoll-in-c/update",
+    "command": "cc -Iepoll_server@exe -I. -I.. -I../incl -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -Werror -g -MD -MQ 'epoll_server@exe/src_timer.c.o' -MF 'epoll_server@exe/src_timer.c.o.d' -o 'epoll_server@exe/src_timer.c.o' -c ../src/timer.c",
+    "file": "../src/timer.c",
+    "output": "epoll_server@exe/src_timer.c.o"
+  },
+  {
+    "directory": "/mnt/c/Users/JakubJíra/Codes/B4M36ESW/epoll-in-c/update",
+    "command": "cc -Iepoll_server@exe -I. -I.. -I../incl -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -Werror -g -MD -MQ 'epoll_server@exe/src_tcp_server.c.o' -MF 'epoll_server@exe/src_tcp_server.c.o.d' -o 'epoll_server@exe/src_tcp_server.c.o' -c ../src/tcp_server.c",
+    "file": "../src/tcp_server.c",
+    "output": "epoll_server@exe/src_tcp_server.c.o"
+  }
+]

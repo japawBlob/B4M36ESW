@@ -1,0 +1,11 @@
+[
+    {
+      "namespace": "cz.esw.serialization.avro",
+      "type": "record",
+      "name": "AMeasurementInfo",
+      "fields": [
+      ]
+    }
+  ]
+
+

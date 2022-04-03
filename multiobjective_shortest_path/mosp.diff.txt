@@ -1,0 +1,32 @@
+diff --git a/src/main/java/cz/cvut/fel/esw/shortestpath/search/MultiObjectiveAStar.java b/src/main/java/cz/cvut/fel/esw/shortestpath/search/MultiObjectiveAStar.java
+index 0aa9755..bcef10d 100644
+--- a/src/main/java/cz/cvut/fel/esw/shortestpath/search/MultiObjectiveAStar.java
++++ b/src/main/java/cz/cvut/fel/esw/shortestpath/search/MultiObjectiveAStar.java
+@@ -87,7 +87,8 @@ public class MultiObjectiveAStar {
+             Heap.Entry<SearchState> minEntry = heap.extractMinimum();
+             SearchState minState = minEntry.getValue();
+ 
+-            logger.trace("Extracted state in " + iterationCounter + ". iteration: " + minState);
++// TODO Problematicky logger
++            //logger.trace("Extracted state in " + iterationCounter + ". iteration: " + minState);
+ 
+             opened.remove(minEntry);
+ 
+@@ -98,7 +99,7 @@ public class MultiObjectiveAStar {
+             if (isGoal(minState)) {
+                 results.add(minState);
+                 solutions.addWithoutChecks(minEntry);
+-                logger.trace(minState);
++                //logger.trace(minState);
+                 if (results.size() >= numberOfResults) return results;
+                 continue;
+             }
+@@ -157,7 +158,7 @@ public class MultiObjectiveAStar {
+ 
+         return new MultiObjectiveAStar(new BinaryHeap<>(HEAP_COMPARATOR), opened, closed, solutions, timeHeuristic, distanceHeuristic, graph, start, goal);
+     }
+-
++/// TODO dvakrat se tu vola dijkstra, jednou s time, jednou s distance, neslo by to najednou?
+     private static Heuristic createTimeHeuristic(Graph<Node, Edge> graph, int goal) {
+         int[] heuristic = Dijkstra.createBackward(goal, graph, Edge::getTime).calculate();
+         return new PrecalculatedHeuristic(heuristic);

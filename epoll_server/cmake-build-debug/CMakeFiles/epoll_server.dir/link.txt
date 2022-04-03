@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -Wall -O2 -g  -rdynamic CMakeFiles/epoll_server.dir/epollfd.cpp.o CMakeFiles/epoll_server.dir/epollinstance.cpp.o CMakeFiles/epoll_server.dir/epollstdin.cpp.o CMakeFiles/epoll_server.dir/epolltimer.cpp.o CMakeFiles/epoll_server.dir/main.cpp.o  -o epoll_server 
