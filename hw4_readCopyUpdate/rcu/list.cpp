@@ -15,8 +15,8 @@
 #  define wr_lock(lock) pthread_rwlock_wrlock(lock) // TODO
 #  define wr_unlock(lock) pthread_rwlock_unlock(lock) // TODO
 #elif defined (USE_RCU)
-#  define rd_lock(lock) // TODO
-#  define rd_unlock(lock) // TODO
+#  define rd_lock(lock) urcu_qsbr_read_lock();
+#  define rd_unlock(lock) urcu_qsbr_read_unlock();
 #  define wr_lock(lock) // TODO
 #  define wr_unlock(lock) //TODO
 #else
@@ -37,11 +37,12 @@ void esw_list_init(LIST_TYPE *list)
     CHECK(pthread_mutex_init(&list->lock, NULL));
     list->head = NULL;
 #elif defined (USE_RWLOCK)
-    CHECK(pthread_rwlockattr_init())
-    CHECK(pthread_rwlock_init(&list->lock, NULL));
+    CHECK(pthread_rwlockattr_init(&list->attr));
+    CHECK(pthread_rwlockattr_setkind_np(&list->attr, PTHREAD_RWLOCK_PREFER_WRITER_NONRECURSIVE_NP));
+    CHECK(pthread_rwlock_init(&list->lock, &list->attr));
     list->head = NULL;
 #elif defined (USE_RCU)
-    // TODO
+    CDS_INIT_LIST_HEAD(list);
 #else
 #error "No lock type defined"
 #endif
@@ -60,6 +61,7 @@ void esw_list_push(LIST_TYPE *list, const char *const key, const char *const val
     list->head = node;
     wr_unlock(&list->lock);
 #elif defined (USE_RCU)
+    cds_list_add_tail_rcu(&node->node, list);
     // TODO
 #endif
 }
@@ -85,7 +87,24 @@ void esw_list_update(LIST_TYPE *list, const char *const key, const char *const v
     }
     wr_unlock(&list->lock);
 #elif defined (USE_RCU)
-    // TODO
+    struct esw_node *current, *temp;
+    cds_list_for_each_entry_safe(current, temp, list, node) {
+		if (strcmp(current->key, key) == 0) {
+            //free(current->value);
+//            char *node_value = (char *)calloc(sizeof(char), strlen(value) + 1);
+//            strcpy(node_value, value);
+//            current->value = node_value;
+//            current->checksum = calc_checksum(node_value);
+            struct esw_node* new_node = esw_list_create_node(key, value);
+            cds_list_replace_rcu(&current->node, &new_node->node);
+            //free(current->key);
+            //free(current->value);
+            esw_list_free_node(current);
+            //free(current);
+            //urcu_qsbr_call_rcu(&current->rcu_head, free_node_rcu);
+            break;
+        }
+	}
 #endif
 }
 
@@ -115,7 +134,22 @@ bool esw_list_find(LIST_TYPE *list, const char *const key, char *value, const si
         current = current->next;
     }
 #elif defined (USE_RCU)
-    // TODO
+    struct esw_node *current;
+    cds_list_for_each_entry_rcu(current, list, node) {
+		if (strcmp(current->key, key) == 0) {
+            if (strlen(current->value) < max_len) {
+                strcpy(value, current->value);
+                if(calc_checksum(value) != current->checksum) err(1, "%s:%d wrong checksum", __FILE__, __LINE__);
+            } else {
+                strncpy(value, current->value, max_len - 1);
+                value[max_len - 1] = '\0';
+                if(calc_checksum(value) != current->checksum) err(1, "%s:%d wrong checksum", __FILE__, __LINE__);
+            }
+            found = true;
+            break;
+        }
+	}
+
 #endif
     rd_unlock(&list->lock);
 

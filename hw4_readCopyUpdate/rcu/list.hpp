@@ -7,8 +7,9 @@
 #include <urcu-qsbr.h>		/* Userspace RCU flavor */
 #include <urcu/rculist.h>	/* RCU list */
 #include <urcu/compiler.h>	/* For CAA_ARRAY_SIZE */
-#endif
+//#include <urcu/urcu-memb.h>
 
+#endif
 #if defined (USE_MUTEX) || defined (USE_RWLOCK)
 #define LIST_TYPE esw_list_t
 #elif defined (USE_RCU)
@@ -26,6 +27,8 @@ typedef struct esw_node {
     struct esw_node * prev;
 #elif defined (USE_RCU)
     // TODO
+    struct cds_list_head node;	/* Linked-list chaining */
+	struct rcu_head rcu_head;   /* For call_rcu() */
 #else
 #error "No lock type defined"
 #endif
@@ -36,6 +39,7 @@ typedef struct esw_list {
 #if defined (USE_MUTEX)
     pthread_mutex_t lock;
 #elif defined (USE_RWLOCK)
+    pthread_rwlockattr_t attr;
     pthread_rwlock_t lock;
 #endif
 } esw_list_t;
