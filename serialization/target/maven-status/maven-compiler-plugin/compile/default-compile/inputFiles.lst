@@ -1,0 +1,17 @@
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/handler/DataHandler.java
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/json/Dataset.java
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/handler/ProtoDataHandler.java
+/home/japaw/Codes/B4M36ESW/serialization/target/generated-sources/avro/java/cz/esw/serialization/avro/Protocol.java
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/json/MeasurementInfo.java
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/DataProducer.java
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/ResultConsumer.java
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/ProtocolType.java
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/json/DataType.java
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/AppTest.java
+/home/japaw/Codes/B4M36ESW/serialization/target/generated-sources/avro/java/cz/esw/serialization/avro/AMeasurementInfo.java
+/home/japaw/Codes/B4M36ESW/serialization/target/generated-sources/protobuf/java/cz/esw/serialization/proto/Measurements.java
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/json/Result.java
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/ResultChecker.java
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/handler/JsonDataHandler.java
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/App.java
+/home/japaw/Codes/B4M36ESW/serialization/src/main/java/cz/esw/serialization/handler/AvroDataHandler.java
