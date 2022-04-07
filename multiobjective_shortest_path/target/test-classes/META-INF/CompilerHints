@@ -1,0 +1,11 @@
+dontinline,*.*_all_jmhStub
+dontinline,*.*_avgt_jmhStub
+dontinline,*.*_sample_jmhStub
+dontinline,*.*_ss_jmhStub
+dontinline,*.*_thrpt_jmhStub
+inline,cz/cvut/fel/esw/shortestpath/search/DijkstraBenchmark$SearchSetup.loadGraph
+inline,cz/cvut/fel/esw/shortestpath/search/DijkstraBenchmark$SearchSetup.setOrigin
+inline,cz/cvut/fel/esw/shortestpath/search/DijkstraBenchmark$SearchSetup.setRandom
+inline,cz/cvut/fel/esw/shortestpath/search/DijkstraBenchmark.measureDijkstra
+inline,cz/cvut/fel/esw/shortestpath/search/MultiObjectiveAStarBenchmark$SearchSetup.loadGraph
+inline,cz/cvut/fel/esw/shortestpath/search/MultiObjectiveAStarBenchmark.measureMultiObjectiveAStar

@@ -227,12 +227,12 @@ class BinaryHeapTest {
         }
 
         @Override
-        public Integer getIndex() {
+        public int getIndex() {
             return heapIndex;
         }
 
         @Override
-        public void setIndex(Integer index) {
+        public void setIndex(int index) {
             this.heapIndex = index;
         }
 

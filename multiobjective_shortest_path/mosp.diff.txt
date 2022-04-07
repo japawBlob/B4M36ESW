@@ -1,5 +1,24 @@
+diff --git a/src/main/java/cz/cvut/fel/esw/shortestpath/search/Dijkstra.java b/src/main/java/cz/cvut/fel/esw/shortestpath/search/Dijkstra.java
+index ac9ec6e..38dee17 100644
+--- a/src/main/java/cz/cvut/fel/esw/shortestpath/search/Dijkstra.java
++++ b/src/main/java/cz/cvut/fel/esw/shortestpath/search/Dijkstra.java
+@@ -147,12 +147,12 @@ public class Dijkstra {
+ 
+ 
+         @Override
+-        public Integer getIndex() {
++        public int getIndex() {
+             return heapIndex;
+         }
+ 
+         @Override
+-        public void setIndex(Integer index) {
++        public void setIndex(int index) {
+             this.heapIndex = index;
+         }
+ 
 diff --git a/src/main/java/cz/cvut/fel/esw/shortestpath/search/MultiObjectiveAStar.java b/src/main/java/cz/cvut/fel/esw/shortestpath/search/MultiObjectiveAStar.java
-index 0aa9755..bcef10d 100644
+index 0aa9755..c57cfc2 100644
 --- a/src/main/java/cz/cvut/fel/esw/shortestpath/search/MultiObjectiveAStar.java
 +++ b/src/main/java/cz/cvut/fel/esw/shortestpath/search/MultiObjectiveAStar.java
 @@ -87,7 +87,8 @@ public class MultiObjectiveAStar {
@@ -30,3 +49,53 @@ index 0aa9755..bcef10d 100644
      private static Heuristic createTimeHeuristic(Graph<Node, Edge> graph, int goal) {
          int[] heuristic = Dijkstra.createBackward(goal, graph, Edge::getTime).calculate();
          return new PrecalculatedHeuristic(heuristic);
+diff --git a/src/main/java/cz/cvut/fel/esw/shortestpath/util/BinaryHeap.java b/src/main/java/cz/cvut/fel/esw/shortestpath/util/BinaryHeap.java
+index 990a86d..ab84380 100644
+--- a/src/main/java/cz/cvut/fel/esw/shortestpath/util/BinaryHeap.java
++++ b/src/main/java/cz/cvut/fel/esw/shortestpath/util/BinaryHeap.java
+@@ -267,9 +267,9 @@ public class BinaryHeap<E> implements Heap<E> {
+ 
+     public interface IndexedEntry<TValue> extends Heap.Entry<TValue> {
+ 
+-        Integer getIndex();
++        int getIndex();
+ 
+-        void setIndex(Integer index);
++        void setIndex(int index);
+     }
+ 
+     private static class DefaultIndexedEntry<TValue> implements IndexedEntry<TValue> {
+@@ -292,12 +292,12 @@ public class BinaryHeap<E> implements Heap<E> {
+         }
+ 
+         @Override
+-        public Integer getIndex() {
++        public int getIndex() {
+             return heapIndex;
+         }
+ 
+         @Override
+-        public void setIndex(Integer index) {
++        public void setIndex(int index) {
+             this.heapIndex = index;
+         }
+ 
+diff --git a/src/test/java/cz/cvut/fel/esw/shortestpath/util/BinaryHeapTest.java b/src/test/java/cz/cvut/fel/esw/shortestpath/util/BinaryHeapTest.java
+index 27c11ff..9b5b1c7 100644
+--- a/src/test/java/cz/cvut/fel/esw/shortestpath/util/BinaryHeapTest.java
++++ b/src/test/java/cz/cvut/fel/esw/shortestpath/util/BinaryHeapTest.java
+@@ -227,12 +227,12 @@ class BinaryHeapTest {
+         }
+ 
+         @Override
+-        public Integer getIndex() {
++        public int getIndex() {
+             return heapIndex;
+         }
+ 
+         @Override
+-        public void setIndex(Integer index) {
++        public void setIndex(int index) {
+             this.heapIndex = index;
+         }
+ 

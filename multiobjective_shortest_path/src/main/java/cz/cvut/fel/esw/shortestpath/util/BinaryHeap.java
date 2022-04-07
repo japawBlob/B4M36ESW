@@ -267,9 +267,9 @@ public class BinaryHeap<E> implements Heap<E> {
 
     public interface IndexedEntry<TValue> extends Heap.Entry<TValue> {
 
-        Integer getIndex();
+        int getIndex();
 
-        void setIndex(Integer index);
+        void setIndex(int index);
     }
 
     private static class DefaultIndexedEntry<TValue> implements IndexedEntry<TValue> {
@@ -292,12 +292,12 @@ public class BinaryHeap<E> implements Heap<E> {
         }
 
         @Override
-        public Integer getIndex() {
+        public int getIndex() {
             return heapIndex;
         }
 
         @Override
-        public void setIndex(Integer index) {
+        public void setIndex(int index) {
             this.heapIndex = index;
         }
 
