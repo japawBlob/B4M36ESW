@@ -158,7 +158,6 @@ public class MultiObjectiveAStar {
 
         return new MultiObjectiveAStar(new BinaryHeap<>(HEAP_COMPARATOR), opened, closed, solutions, timeHeuristic, distanceHeuristic, graph, start, goal);
     }
-/// TODO dvakrat se tu vola dijkstra, jednou s time, jednou s distance, neslo by to najednou?
     private static Heuristic createTimeHeuristic(Graph<Node, Edge> graph, int goal) {
         int[] heuristic = Dijkstra.createBackward(goal, graph, Edge::getTime).calculate();
         return new PrecalculatedHeuristic(heuristic);

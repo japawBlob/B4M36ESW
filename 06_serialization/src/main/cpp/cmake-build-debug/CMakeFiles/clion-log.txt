@@ -1,0 +1,23 @@
+C:\WINDOWS\system32\wsl.exe --distribution Ubuntu --exec /bin/bash -c "export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/c/Users/JakubJíra/Codes/B4M36ESW/06_serialization/src/main/cpp/cmake-build-debug && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' /mnt/c/Users/JakubJíra/Codes/B4M36ESW/06_serialization/src/main/cpp"
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found suitable version "1.71.0", minimum required is "1.42.0") found components: system thread regex 
+-- Found Protobuf: /usr/local/lib/libprotobuf.so;-lpthread (found version "3.20.1") 
+-- Checking for module 'jsoncpp'
+--   Found jsoncpp, version 1.7.4
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/JakubJÃ­ra/Codes/B4M36ESW/06_serialization/src/main/cpp/cmake-build-debug

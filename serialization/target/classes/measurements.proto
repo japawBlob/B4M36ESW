@@ -1,5 +1,0 @@
-syntax = "proto3";
-package esw;
-
-option java_package = "cz.esw.serialization.proto";
-option java_multiple_files = true;

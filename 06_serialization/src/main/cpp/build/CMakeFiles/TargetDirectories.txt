@@ -1,0 +1,3 @@
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/06_serialization/src/main/cpp/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/06_serialization/src/main/cpp/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/06_serialization/src/main/cpp/build/CMakeFiles/server.dir

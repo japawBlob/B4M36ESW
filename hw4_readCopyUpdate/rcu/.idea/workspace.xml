@@ -18,38 +18,95 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b07adb-1624-4543-a149-7fdd2854211f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06_serialization/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/list.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list_mutex" beforeDir="false" afterPath="$PROJECT_DIR$/list_mutex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/list_rcu" beforeDir="false" afterPath="$PROJECT_DIR$/list_rcu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/HEAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/description" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/hooks/applypatch-msg.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/hooks/commit-msg.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/hooks/fsmonitor-watchman.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/hooks/post-update.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/hooks/pre-applypatch.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/hooks/pre-commit.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/hooks/pre-merge-commit.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/hooks/pre-push.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/hooks/pre-rebase.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/hooks/pre-receive.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/hooks/prepare-commit-msg.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/hooks/push-to-checkout.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/hooks/update.sample" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/info/exclude" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/logs/HEAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/logs/refs/heads/master" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/logs/refs/remotes/origin/HEAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/objects/pack/pack-3746dd0e61fcd9363466c6ceb9b61519b92eccd0.idx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/objects/pack/pack-3746dd0e61fcd9363466c6ceb9b61519b92eccd0.pack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/packed-refs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/refs/heads/master" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/not.git/refs/remotes/origin/HEAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list_rwlock" beforeDir="false" afterPath="$PROJECT_DIR$/list_rwlock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/.cmake/api/v1/query/client-vscode/query.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/.cmake/api/v1/reply/cache-v2-253de56bb9079f5dde32.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/.cmake/api/v1/reply/codemodel-v2-0bb8f32128509cca019b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/.cmake/api/v1/reply/index-2022-04-07T19-57-02-0178.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/.cmake/api/v1/reply/target-server-Debug-a10021723bddec8e373e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/3.18.4/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/3.18.4/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/3.18.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/3.18.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/3.18.4/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/3.18.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/3.18.4/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/3.18.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/3.18.4/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/CMakeFiles/server.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/server" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/build/server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/.cmake/api/v1/reply/cache-v2-602837331f0051192686.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-80d3a9b69bccda44ec9d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-7dbd04981d13a73caebb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/.cmake/api/v1/reply/index-2022-04-07T19-58-21-0300.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/.cmake/api/v1/reply/target-server-Debug-a10021723bddec8e373e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-11e845ac0e0ff4e1c320.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/3.21.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/3.21.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/3.21.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/server.dir/dataset.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/server.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/server.dir/measurementinfo.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/CMakeFiles/server.dir/result.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/src/main/cpp/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/classes/cz/esw/serialization/avro/Protocol.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/classes/cz/esw/serialization/avro/Protocol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/classes/measurements.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/generated-sources/avro/java/cz/esw/serialization/avro/AMeasurementInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/generated-sources/avro/java/cz/esw/serialization/avro/AMeasurementInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/generated-sources/avro/java/cz/esw/serialization/avro/Protocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/generated-sources/avro/java/cz/esw/serialization/avro/Protocol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/generated-sources/protobuf/java/cz/esw/serialization/proto/Measurements.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/generated-sources/protobuf/java/cz/esw/serialization/proto/Measurements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/any.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/any.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/api.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/compiler/plugin.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/compiler/plugin.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/descriptor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/descriptor.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/duration.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/duration.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/empty.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/empty.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/field_mask.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/field_mask.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/source_context.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/source_context.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/struct.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/struct.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/timestamp.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/timestamp.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/type.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/type.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/wrappers.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../../serialization/target/protoc-dependencies/b4aae0f2cd5f4909e5c8ad6eb3bbd70f/google/protobuf/wrappers.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +154,11 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2021" />
+    <option name="minorVersion" value="3.3" />
+  </component>
   <component name="ProjectId" id="27ItTDW6gBUEA321MvGtUA8uR7V" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -111,6 +173,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -124,7 +187,7 @@
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rcu" TARGET_NAME="all" CONFIG_NAME="all" version="1">
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="4" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rcu" TARGET_NAME="list_rcu" CONFIG_NAME="list_rcu" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
@@ -143,6 +206,55 @@
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Makefile Application.all" />
@@ -163,6 +275,9 @@
       <workItem from="1649097766335" duration="6184000" />
       <workItem from="1649183597361" duration="7583000" />
       <workItem from="1649275684598" duration="2776000" />
+      <workItem from="1649510360584" duration="47000" />
+      <workItem from="1649674940247" duration="73000" />
+      <workItem from="1649675058211" duration="1016000" />
     </task>
     <servers />
   </component>

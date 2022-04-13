@@ -1,6 +1,0 @@
-# ninja log v5
-0	521	1649361525057770835	CMakeFiles/server.dir/measurementinfo.cpp.o	bd105e3b3a0b7b1
-1	638	1649361525173772881	CMakeFiles/server.dir/result.cpp.o	91cff90d5baca6a2
-0	638	1649361525173772881	CMakeFiles/server.dir/dataset.cpp.o	29852963d77f4124
-0	3436	1649361527969822175	CMakeFiles/server.dir/main.cpp.o	fd2db5532f2ab023
-3439	3562	1649361528097824431	server	e55bca19197bdb79

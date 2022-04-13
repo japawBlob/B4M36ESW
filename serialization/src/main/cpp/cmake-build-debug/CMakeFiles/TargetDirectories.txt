@@ -1,3 +1,0 @@
-/home/japaw/Codes/B4M36ESW/serialization/src/main/cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/japaw/Codes/B4M36ESW/serialization/src/main/cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/japaw/Codes/B4M36ESW/serialization/src/main/cpp/cmake-build-debug/CMakeFiles/server.dir

@@ -15,8 +15,8 @@
 #  define wr_lock(lock) pthread_rwlock_wrlock(lock) // TODO
 #  define wr_unlock(lock) pthread_rwlock_unlock(lock) // TODO
 #elif defined (USE_RCU)
-#  define rd_lock(lock) urcu_qsbr_read_lock();
-#  define rd_unlock(lock) urcu_qsbr_read_unlock();
+#  define rd_lock(lock) rcu_read_lock();
+#  define rd_unlock(lock) rcu_read_unlock_qsbr();
 #  define wr_lock(lock) // TODO
 #  define wr_unlock(lock) //TODO
 #else

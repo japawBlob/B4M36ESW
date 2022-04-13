@@ -1,8 +1,79 @@
 diff --git a/src/main/java/cz/cvut/fel/esw/shortestpath/search/Dijkstra.java b/src/main/java/cz/cvut/fel/esw/shortestpath/search/Dijkstra.java
-index ac9ec6e..38dee17 100644
+index ac9ec6e..ec4da9f 100644
 --- a/src/main/java/cz/cvut/fel/esw/shortestpath/search/Dijkstra.java
 +++ b/src/main/java/cz/cvut/fel/esw/shortestpath/search/Dijkstra.java
-@@ -147,12 +147,12 @@ public class Dijkstra {
+@@ -22,8 +22,12 @@ public class Dijkstra {
+     private final int origin;
+ 
+     private final Heap<SingleObjState> heap;
+-    private final Map<Integer, Heap.Entry<SingleObjState>> seen;
+-    private final Set<Integer> closed;
++    //private final Map<Integer, Heap.Entry<SingleObjState>> seen;
++    private final List<Heap.Entry<SingleObjState>> seen;
++    //prepsat na array of size n, kde si budu drzet co je zavreno a co jeste ne.
++    //private final Set<Integer> closed;
++    private final List<Boolean> closed;
++    //private final boolean[] closed;
+ 
+ 
+     Dijkstra(int origin, Graph<Node, Edge> graph, ToIntFunction<Edge> objectiveFunction, Direction direction) {
+@@ -32,8 +36,15 @@ public class Dijkstra {
+         this.direction = direction;
+         this.origin = origin;
+         this.heap = new BinaryHeap<>(Comparator.<SingleObjState>naturalOrder());
+-        this.seen = new HashMap<>();
+-        this.closed = new HashSet<>();
++        //this.seen = new HashMap<>();
++        this.seen = new ArrayList<>(Arrays.asList(new SingleObjState[graph.numberOfNodes()]));
++        Collections.fill(this.seen, null);
++        //boolean [] blob = new boolean[graph.numberOfNodes()];
++        //this.closed = new ArrayList<>(graph.numberOfNodes());
++        this.closed = new ArrayList<>(Arrays.asList(new Boolean[graph.numberOfNodes()]));
++        Collections.fill(this.closed, false);
++        //this.closed = new HashSet<>();
++        //this.closed = new boolean[graph.numberOfNodes()];
+     }
+ 
+     /**
+@@ -81,7 +92,7 @@ public class Dijkstra {
+ 
+     private void encounter(SingleObjState state) {
+         Heap.Entry<SingleObjState> successorEntry = heap.insert(state);
+-        seen.put(state.getNodeId(), successorEntry);
++        seen.set(state.getNodeId(), successorEntry);
+     }
+ 
+     private void encounterAgain(SingleObjState successor) {
+@@ -89,22 +100,23 @@ public class Dijkstra {
+         if (successor.getObjective() < seenEntry.getValue().getObjective()) {
+             Heap.Entry<SingleObjState> newEntry = heap.decrease(seenEntry, successor);
+             if (newEntry != seenEntry) {
+-                seen.put(successor.getNodeId(), newEntry);
++                seen.set(successor.getNodeId(), newEntry);
+             }
+-
+         }
+     }
+ 
+     private boolean isInHeap(int successorId) {
+-        return seen.containsKey(successorId);
++        return seen.get(successorId) != null;
+     }
+ 
+     private void close(int nodeId) {
+-        closed.add(nodeId);
++        //closed[nodeId] = true;
++        closed.set(nodeId, true);
+     }
+ 
+     private boolean isClosed(int nodeId) {
+-        return closed.contains(nodeId);
++        //return closed[nodeId];
++        return closed.get(nodeId);
+     }
+ 
+     public static Dijkstra createForward(int origin, Graph<Node, Edge> graph, ToIntFunction<Edge> objectiveFunction) {
+@@ -147,12 +159,12 @@ public class Dijkstra {
  
  
          @Override

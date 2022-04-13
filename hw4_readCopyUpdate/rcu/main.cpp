@@ -88,7 +88,7 @@ void *reader_thread(void *arg)
 
     // TODO - Rcu should have someting here
 #if defined(USE_RCU)
-    urcu_qsbr_register_thread();
+    rcu_defer_register_thread();
 #endif
 
     while (1) {
