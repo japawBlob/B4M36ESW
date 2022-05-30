@@ -15,8 +15,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 public class VmlensStringSetTest {
 
-//    Supplier<StringSet> testedSet = () -> new NonblockStringSet(1);
-    Supplier<StringSet> testedSet = () -> new SynchronizedStringSet(1);
+    Supplier<StringSet> testedSet = () -> new NonblockStringSet(1);
+//    Supplier<StringSet> testedSet = () -> new SynchronizedStringSet(5);
 
 
     /**

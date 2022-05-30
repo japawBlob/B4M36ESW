@@ -76,6 +76,4 @@ public class SynchronizedStringSet implements StringSet {
             this.next = next;
         }
     }
-
-
 }
