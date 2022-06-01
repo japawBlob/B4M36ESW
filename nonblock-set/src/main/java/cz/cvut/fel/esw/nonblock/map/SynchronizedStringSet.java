@@ -1,6 +1,8 @@
 package cz.cvut.fel.esw.nonblock.map;
 
 
+import java.util.concurrent.atomic.AtomicReference;
+
 public class SynchronizedStringSet implements StringSet {
 
     private final int mask;
@@ -8,6 +10,7 @@ public class SynchronizedStringSet implements StringSet {
     private int size = 0;
 
     private final Node[] bins;
+    private final int binsLength;
 
     public SynchronizedStringSet(int minSize) {
         if (minSize <= 0) {
@@ -16,6 +19,7 @@ public class SynchronizedStringSet implements StringSet {
         int binsLength = Utils.smallestGreaterPowerOfTwo(minSize);
         this.mask = binsLength - 1;
         this.bins = new Node[binsLength];
+        this.binsLength = binsLength;
     }
 
     @Override
@@ -58,9 +62,24 @@ public class SynchronizedStringSet implements StringSet {
 
     @Override
     public int size() {
+        //return calculateSize();
         return size;
     }
 
+    private int calculateSize() {
+        int size = 0;
+        for (int i = 0; i<binsLength;i++){
+            if (bins[i] != null){
+                size++;
+                Node bin = bins[i].next;
+                while (bin != null){
+                    size++;
+                    bin = bin.next;
+                }
+            }
+        }
+        return size;
+    }
 
     private static class Node {
 

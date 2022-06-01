@@ -42,8 +42,8 @@ import org.openjdk.jcstress.infra.results.I_Result;
 public class JcstressStringSetTest {
 
     static StringSet createSet(int minSize) {
-        return new SynchronizedStringSet(minSize);
-//        return new NonblockStringSet(minSize);
+ //       return new SynchronizedStringSet(minSize);
+        return new NonblockStringSet(minSize);
     }
 
     @JCStressTest

@@ -52,8 +52,8 @@ public class Main {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         for (int i = 1; i < MAX_THREADS; i++) {
             for (int j = 0; j < REPEAT_BENCHMARK; j++) {
-                long time1 = test(i, new SynchronizedStringSet(10000));
-                //long time2 = test(i, new NonblockDictionary(10000));
+//                long time1 = test(i, new SynchronizedStringSet(10000));
+                long time2 = test(i, new NonblockStringSet(10000));
             }
         }
     }

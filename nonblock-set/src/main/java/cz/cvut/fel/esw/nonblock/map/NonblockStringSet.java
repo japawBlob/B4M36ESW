@@ -1,9 +1,11 @@
 package cz.cvut.fel.esw.nonblock.map;
 
-
-import javax.xml.stream.FactoryConfigurationError;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicReferenceArray;
+import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.function.UnaryOperator;
 
 public class NonblockStringSet implements StringSet {
 
@@ -11,7 +13,9 @@ public class NonblockStringSet implements StringSet {
 
     private final AtomicReferenceArray<Node> bins;
 
-    private int size = 0;
+    private AtomicInteger size = new AtomicInteger(0);
+
+    private ReentrantLock mutex = new ReentrantLock();
 
     public NonblockStringSet(int minSize) {
         if (minSize <= 0) {
@@ -25,22 +29,29 @@ public class NonblockStringSet implements StringSet {
     @Override
     public void add(String word) {
         int binIndex = getBinIndex(word);
-        Node bin = this.bins.get(binIndex);
-        if (bin == null) {
-            bins.set(binIndex, new Node(word));
-            size++;
+//        Node bin = this.bins.get(binIndex);
+//        if (bin == null) {
+//            bins.getAndSet(binIndex, new Node(word));
+//            size.addAndGet(1);
+//            return;
+//        }
+        if (this.bins.compareAndSet(binIndex, null, new Node(word))){
             return;
         }
+        //AtomicReferenceFieldUpdater Updater = AtomicReferenceFieldUpdater.newUpdater(Node, )
+        Node bin = this.bins.get(binIndex);
         while (true) {
             if (bin.word.equals(word)) {
                 return;
             } else {
+//                if (bin.next.compareAndSet(null, new Node(word))) {
+//                    return;
+//                }
                 if (bin.next == null) {
-                    size++;
-                    bin.next = new Node(word);
+                    bin.next = new AtomicReference<>(new Node(word));/* na toto místo se můžou dostat zároveň 2 thready - bylo by fajn udělat tento assign atomicky */
                     return;
                 }
-                bin = bin.next;
+                bin = bin.next.get();
             }
         }
     }
@@ -59,19 +70,29 @@ public class NonblockStringSet implements StringSet {
                 if (bin.next == null) {
                     return false;
                 }
-                bin = bin.next;
+                bin = bin.next.get();
             }
         }
     }
 
     @Override
     public int size() {
+        //return 10;
         return calculateSize();
     }
 
     private int calculateSize() {
-
-        //calculate size by walking through the set
+        int size = 0;
+        for (int i = 0; i<bins.length();i++){
+            if (bins.get(i) != null){
+                size++;
+                AtomicReference<Node> bin = bins.get(i).next;
+                while (bin != null){
+                    size++;
+                    bin = bin.get().next;
+                }
+            }
+        }
         return size;
     }
 
@@ -82,14 +103,18 @@ public class NonblockStringSet implements StringSet {
     private static class Node {
 
         private final String word;
-        private Node next;
+        private AtomicReference<Node> next;
 
         public Node(String word) {
             this.word = word;
+            this.next = null;
         }
         public Node(String word, Node next) {
             this.word = word;
-            this.next = next;
+            this.next = new AtomicReference<>(next);
+        }
+        public void setNext (String word){
+            this.next = new AtomicReference<>(new Node(word));
         }
     }
 }
