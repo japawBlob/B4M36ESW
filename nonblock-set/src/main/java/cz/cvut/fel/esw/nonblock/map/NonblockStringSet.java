@@ -38,20 +38,15 @@ public class NonblockStringSet implements StringSet {
         if (this.bins.compareAndSet(binIndex, null, new Node(word))){
             return;
         }
-        //AtomicReferenceFieldUpdater Updater = AtomicReferenceFieldUpdater.newUpdater(Node, )
         Node bin = this.bins.get(binIndex);
         while (true) {
             if (bin.word.equals(word)) {
                 return;
             } else {
-//                if (bin.next.compareAndSet(null, new Node(word))) {
-//                    return;
-//                }
-                if (bin.next == null) {
-                    bin.next = new AtomicReference<>(new Node(word));/* na toto místo se můžou dostat zároveň 2 thready - bylo by fajn udělat tento assign atomicky */
+                if (bin.compareAndSetNext(null, new Node(word))){
                     return;
                 }
-                bin = bin.next.get();
+                bin = bin.next;
             }
         }
     }
@@ -70,7 +65,7 @@ public class NonblockStringSet implements StringSet {
                 if (bin.next == null) {
                     return false;
                 }
-                bin = bin.next.get();
+                bin = bin.next;
             }
         }
     }
@@ -86,10 +81,10 @@ public class NonblockStringSet implements StringSet {
         for (int i = 0; i<bins.length();i++){
             if (bins.get(i) != null){
                 size++;
-                AtomicReference<Node> bin = bins.get(i).next;
+                Node bin = bins.get(i).next;
                 while (bin != null){
                     size++;
-                    bin = bin.get().next;
+                    bin = bin.next;
                 }
             }
         }
@@ -103,7 +98,10 @@ public class NonblockStringSet implements StringSet {
     private static class Node {
 
         private final String word;
-        private AtomicReference<Node> next;
+        private volatile Node next;
+
+        static final AtomicReferenceFieldUpdater<Node, Node> nextUpdater =
+                AtomicReferenceFieldUpdater.newUpdater(Node.class, Node.class, "next");
 
         public Node(String word) {
             this.word = word;
@@ -111,10 +109,10 @@ public class NonblockStringSet implements StringSet {
         }
         public Node(String word, Node next) {
             this.word = word;
-            this.next = new AtomicReference<>(next);
+            this.next = next;
         }
-        public void setNext (String word){
-            this.next = new AtomicReference<>(new Node(word));
+        public boolean compareAndSetNext (Node expect, Node update){
+            return nextUpdater.compareAndSet(this, expect, update);
         }
     }
 }
