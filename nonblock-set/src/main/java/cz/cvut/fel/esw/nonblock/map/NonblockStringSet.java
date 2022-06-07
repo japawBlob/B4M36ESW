@@ -29,12 +29,6 @@ public class NonblockStringSet implements StringSet {
     @Override
     public void add(String word) {
         int binIndex = getBinIndex(word);
-//        Node bin = this.bins.get(binIndex);
-//        if (bin == null) {
-//            bins.getAndSet(binIndex, new Node(word));
-//            size.addAndGet(1);
-//            return;
-//        }
         if (this.bins.compareAndSet(binIndex, null, new Node(word))){
             return;
         }
@@ -54,15 +48,15 @@ public class NonblockStringSet implements StringSet {
     @Override
     public boolean contains(String word) {
         int binIndex = getBinIndex(word);
-        Node bin = this.bins.get(binIndex);
-        if (bin == null) {
+        if (this.bins.compareAndSet(binIndex, null, null)){
             return false;
         }
+        Node bin = this.bins.get(binIndex);
         while (true) {
             if (bin.word.equals(word)) {
                 return true;
             } else {
-                if (bin.next == null) {
+                if (bin.compareAndSetNext(null, null)){
                     return false;
                 }
                 bin = bin.next;
@@ -72,7 +66,6 @@ public class NonblockStringSet implements StringSet {
 
     @Override
     public int size() {
-        //return 10;
         return calculateSize();
     }
 

@@ -1,0 +1,4 @@
+package cz.cvut.fel.esw.matrixmultiplication.jmh_generated;
+public class MatrixMultiplicationBenchmark_MyState_jmhType extends MatrixMultiplicationBenchmark_MyState_jmhType_B3 {
+}
+

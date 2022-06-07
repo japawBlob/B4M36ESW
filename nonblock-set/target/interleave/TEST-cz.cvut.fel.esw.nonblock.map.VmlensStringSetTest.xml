@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="cz.cvut.fel.esw.nonblock.map.VmlensStringSetTest" time="0.191" tests="5" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/opt/maven/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.vendor" value="Private Build"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="Unknown"/>
+    <property name="user.timezone" value="Europe/Prague"/>
+    <property name="maven.conf" value="/opt/maven/conf"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="/opt/maven"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/japaw"/>
+    <property name="user.language" value="en"/>
+    <property name="sun.stderr.encoding" value="UTF-8"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-01-18"/>
+    <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="sun.stdout.encoding" value="UTF-8"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.2+8-Ubuntu-120.04"/>
+    <property name="user.name" value="japaw"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.10.102.1-microsoft-standard-WSL2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.url.bug" value="Unknown"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.2"/>
+    <property name="user.dir" value="/mnt/c/Users/JakubJíra/Codes/B4M36ESW/nonblock-set"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="maven.multiModuleProjectDirectory" value="/mnt/c/Users/JakubJíra/Codes/B4M36ESW/nonblock-set"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vendor" value="Private Build"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vm.version" value="17.0.2+8-Ubuntu-120.04"/>
+    <property name="classworlds.conf" value="/opt/maven/bin/m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="library.jansi.path" value="/opt/maven/lib/jansi-native"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="cz.cvut.fel.esw.nonblock.map.VmlensStringSetTest.testTwoAddsBasic" classname="cz.cvut.fel.esw.nonblock.map.VmlensStringSetTest" time="0.134"/>
+  <testcase name="cz.cvut.fel.esw.nonblock.map.VmlensStringSetTest.testTwoAddsRunner" classname="cz.cvut.fel.esw.nonblock.map.VmlensStringSetTest" time="0.029"/>
+  <testcase name="cz.cvut.fel.esw.nonblock.map.VmlensStringSetTest.testTwoAddsAlreadyContainedRunner" classname="cz.cvut.fel.esw.nonblock.map.VmlensStringSetTest" time="0.007"/>
+  <testcase name="cz.cvut.fel.esw.nonblock.map.VmlensStringSetTest.testThreeAddsAlreadyContainedRunner" classname="cz.cvut.fel.esw.nonblock.map.VmlensStringSetTest" time="0.01"/>
+  <testcase name="cz.cvut.fel.esw.nonblock.map.VmlensStringSetTest.testContains" classname="cz.cvut.fel.esw.nonblock.map.VmlensStringSetTest" time="0.007"/>
+</testsuite>

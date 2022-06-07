@@ -1,7 +1,7 @@
-/home/japaw/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/Main.java
-/home/japaw/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/Utils.java
-/home/japaw/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/StringSet.java
-/home/japaw/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/StringSetWriter.java
-/home/japaw/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest.java
-/home/japaw/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/SynchronizedStringSet.java
-/home/japaw/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/NonblockStringSet.java
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/Main.java
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/StringSet.java
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest.java
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/Utils.java
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/StringSetWriter.java
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/NonblockStringSet.java
+/mnt/c/Users/JakubJíra/Codes/B4M36ESW/nonblock-set/src/main/java/cz/cvut/fel/esw/nonblock/map/SynchronizedStringSet.java

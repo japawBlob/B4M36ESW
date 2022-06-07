@@ -83,4 +83,40 @@ public class VmlensStringSetTest {
         runner.executeVmlens();
     }
 
+    @Test
+    public void testThreeAddsAlreadyContainedRunner() throws InterruptedException {
+        VmlensTestRunner runner = new VmlensTestRunner(testedSet);
+
+        runner.taskAdd("a");
+        runner.taskAdd("a");
+        runner.taskAdd("a");
+        runner.taskAdd("b");
+        runner.taskAdd("c");
+        runner.taskAdd("a");
+        runner.taskAdd("b");
+        runner.taskAdd("b");
+
+
+        runner.assertContains("a");
+        runner.assertContains("b");
+        runner.assertContains("c");
+        runner.assertSize(3);
+
+        runner.executeVmlens();
+    }
+    @Test
+    public void testContains() throws InterruptedException {
+        VmlensTestRunner runner = new VmlensTestRunner(testedSet);
+
+        runner.taskAdd("a");
+        runner.assertContains("a");
+        runner.taskAdd("b");
+        runner.assertContains("b");
+        runner.taskAdd("c");
+        runner.assertContains("c");
+        runner.assertSize(3);
+
+        runner.executeVmlens();
+    }
+
 }

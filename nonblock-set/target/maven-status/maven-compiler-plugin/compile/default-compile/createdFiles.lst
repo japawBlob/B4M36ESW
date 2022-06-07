@@ -1,7 +1,7 @@
 cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoEqualTest_jcstress$3$2.class
 cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoEqualTest_jcstress$1.class
-cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoDistinctTest_jcstress$3$1.class
 cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoDistinctNonEmptyTest_jcstress$1.class
+cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoDistinctTest_jcstress$3$1.class
 cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoDistinctNonEmptyTest_jcstress$4.class
 cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoDistinctTest_jcstress$2.class
 cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoEqualTest_jcstress$4.class
@@ -18,10 +18,10 @@ cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest$TwoDistinctTest.class
 cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoDistinctNonEmptyTest_jcstress$5.class
 cz/cvut/fel/esw/nonblock/map/SynchronizedStringSet.class
 cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoDistinctTest_jcstress$3.class
-cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoEqualTest_jcstress.class
 cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoDistinctTest_jcstress$1.class
-cz/cvut/fel/esw/nonblock/map/NonblockStringSet$Node.class
+cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoEqualTest_jcstress.class
 cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoEqualTest_jcstress$5.class
+cz/cvut/fel/esw/nonblock/map/NonblockStringSet$Node.class
 cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoEqualTest_jcstress$3$1.class
 cz/cvut/fel/esw/nonblock/map/StringSet.class
 cz/cvut/fel/esw/nonblock/map/JcstressStringSetTest_TwoDistinctNonEmptyTest_jcstress.class

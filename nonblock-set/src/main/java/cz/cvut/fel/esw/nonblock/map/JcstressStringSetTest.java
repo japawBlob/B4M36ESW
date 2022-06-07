@@ -125,6 +125,8 @@ public class JcstressStringSetTest {
         }
     }
 
+
+
     public static void main(String[] args) throws Exception {
         //This is NOT the entirely correct/usual way to run the tests. The tool is made to be compiled by maven and run from command line (see jcstress website)
 
